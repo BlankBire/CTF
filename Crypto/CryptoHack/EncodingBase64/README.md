@@ -1,22 +1,25 @@
-# Challenge
-Another common encoding scheme is Base64, which allows us to represent binary data as an ASCII string using an alphabet of 64 characters. One character of a Base64 string encodes 6 binary digits (bits), and so 4 characters of Base64 encode three 8-bit bytes.
-Base64 is most commonly used online, so binary data such as images can be easily included into HTML or CSS files.
-Take the below hex string, decode it into bytes and then encode it into Base64.
-`72bca9b68fc16ac7beeb8f849dca1d8a783e8acf9679bf9269f7bf`
-In Python, after importing the base64 module with `import base64`, you can use the `base64.b64encode()` function. Remember to decode the hex first as the challenge description states.
+## Encoding Base64 — Writeup (CryptoHack)
 
-# Description
-We are given a hex string. The task is two-step:
-- Decode the hex string into raw bytes (every two hex characters → one byte).
-- Encode those bytes into Base64.
-We implemented this in your script using `bytes.fromhex()` to decode the hex and `base64.b64encode()` to produce Base64.
+### Mô tả tổng quan
+- Base64 biểu diễn dữ liệu nhị phân dưới dạng chuỗi ASCII với 64 ký tự.
+- 4 ký tự Base64 mã hoá 3 byte nhị phân; thường dùng để nhúng dữ liệu trong các hệ thống văn bản.
 
-# Solution
-Decode the hex string with `bytes.fromhex()` and then Base64-encode the result with `base64.b64encode()`.
+### Đề bài
+- Cho chuỗi hex: `72bca9b68fc16ac7beeb8f849dca1d8a783e8acf9679bf9269f7bf`
+- Yêu cầu: giải hex → bytes, sau đó mã hoá Base64.
+
+### Lời giải
+```python
+import base64
+
+h = "72bca9b68fc16ac7beeb8f849dca1d8a783e8acf9679bf9269f7bf"
+b = bytes.fromhex(h)
+ans = base64.b64encode(b).decode()
+print(ans)
 ```
-encoderHexText = "72bca9b68fc16ac7beeb8f849dca1d8a783e8acf9679bf9269f7bf"
-decoderHexText = bytes.fromhex(encoderHexText)
-b64 = base64.b64encode(decoderHexText)
-```
-# Flag
+
+### Ghi chú
+- `bytes.fromhex()` chuyển hex → bytes; `base64.b64encode()` trả về bytes Base64, cần `.decode()` để thành chuỗi.
+
+### Flag
 `crypto/Base+64+Encoding+is+Web+Safe/`

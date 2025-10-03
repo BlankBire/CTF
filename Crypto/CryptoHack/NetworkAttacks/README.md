@@ -1,45 +1,32 @@
-# Challenge
-Several of the challenges are dynamic and require you to talk to our challenge servers over the network. This allows you to perform man-in-the-middle attacks on people trying to communicate, or directly attack a vulnerable service. To keep things consistent, our interactive servers always send and receive JSON objects.
-Such network communication can be made easy in Python with the `pwntools` module. This is not part of the Python standard library, so needs to be installed with pip using the command line `pip install pwntools`.
-For this challenge, connect to `socket.cryptohack.org` on port `11112`. Send a JSON object with the key `buy` and value `flag`.
-The example script below contains the beginnings of a solution for you to modify, and you can reuse it for later challenges.
-Connect at `socket.cryptohack.org 11112`
-Challenge files:
-  - pwntools_example.py
+## Network Attacks — Writeup (CryptoHack)
 
-# Description
-The script connects to `socket.cryptohack.org` on port `11112` and communicates with the service using JSON. The server expects a JSON object with a `buy` field describing what the client wants to purchase. If the client asks for something the shop doesn't sell, the server returns an error; if the client asks for the special item `flag`, the server responds with the flag.
-Provided original script:
-```
-request = {
-    "buy": "clothes"
-}
-json_send(request)
+### Mô tả tổng quan
+- Bài yêu cầu giao tiếp socket bằng JSON. Dùng `pwntools` để kết nối và gửi/nhận JSON theo dòng.
+- Server bán duy nhất một mặt hàng đặc biệt: `flag`.
 
-response = json_recv()
-print(response)
-```
-If you send `"buy": "clothes"` you receive:
-```
-{'error': 'Sorry! All we have to sell are flags.'}
-```
+Kết nối: `socket.cryptohack.org 11112`
 
-# Requirement
-- `pip install pwntools`
+### Lời giải
+Gửi JSON có trường `buy` với giá trị `flag`.
+```python
+from pwn import remote
+import json
 
-# Solution
-The server only sells flags. Modify the `buy` value to `"flag"` (or send a JSON object with `{"buy": "flag"}`) and run the script. The script will print the returned JSON which contains the flag.
+io = remote('socket.cryptohack.org', 11112)
 
-Change the request in the script to:
-```
-request = {
-    "buy": "flag"
-}
-json_send(request)
+def json_send(obj):
+    io.sendline(json.dumps(obj).encode())
 
-response = json_recv()
-print(response)
+def json_recv():
+    return json.loads(io.recvline().decode())
+
+json_send({"buy": "flag"})
+print(json_recv())
 ```
 
-# Flag
+### Ghi chú
+- Cài: `pip install pwntools`.
+- Server trả JSON; chỉ cần đọc dòng tiếp theo sau khi gửi.
+
+### Flag
 `crypto{sh0pp1ng_f0r_fl4g5}`
