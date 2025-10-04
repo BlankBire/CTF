@@ -58,3 +58,6 @@ Ghi chú:
 ### Kết luận
 - Lỗ hổng là thiếu xác thực toàn vẹn (không có MAC/AEAD). Với AES-CBC thuần, kẻ tấn công có thể bitflip IV để điều khiển một phần plaintext sau giải mã.
 - Khắc phục: sử dụng AEAD (ví dụ AES-GCM/ChaCha20-Poly1305) hoặc thêm MAC/HMAC trên toàn bộ `IV || CIPHERTEXT` và kiểm tra trước khi giải mã/parse.
+
+### Flag
+`sun{m4yb3_4_ch3ck5um_w0uld_b3_m0r3_53cur3}`
