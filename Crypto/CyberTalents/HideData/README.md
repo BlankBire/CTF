@@ -15,7 +15,7 @@ python .\main.py
 
 Script sẽ đọc `cipher.txt`, giải mã ROT13 và in ra plaintext (flag).
 
-### GGhi chú
+### Ghi chú
 - ROT13 là phép thay thế chữ cái quay 13 ký tự, áp dụng hai lần sẽ trả về ban đầu.
 - Cũng có thể tự kiểm tra nhanh bằng các công cụ online ROT13.
 

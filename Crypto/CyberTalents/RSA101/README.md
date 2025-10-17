@@ -18,7 +18,7 @@ Script sẽ:
 - Đọc `key.pem` và `cipher` (nhị phân)
 - Dùng `PKCS1_v1_5.new(key).decrypt(...)` để lấy plaintext và in ra
 
-### GGhi chú
+### Ghi chú
 - Nếu `print(plaintext.decode())` lỗi, có thể dùng `errors="ignore"` hoặc in dạng hex.
 - Đảm bảo `key.pem` đúng định dạng PEM của private key.
 
