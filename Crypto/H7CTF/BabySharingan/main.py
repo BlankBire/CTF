@@ -1,0 +1,12 @@
+EncodedLeafScroll = "03763f242b333d48701023217121112b31713c065279236767395317714c3f1a36604d"
+EncodedANBUReport = "1c7f31453b34243113113a267e33113d33662714376056647d383b7f6725201a3d674322613130341b7e3b2b56"
+DecodedLeafScroll = "4b414b4153484920434f50494553204556455259204a5554535520484520534545532e"
+DecodedANBUReport = "54484520434f5059204e494e4a4120535452494b455320574954482053494c454e5420505245434953494f4e2e"
+ChakraSignatureLeafScroll = "48377465787b7468335f73683472316e67346e5f72337633346c735f346c6c5f733363"
+ChakraSignatureANBUReport = "48377465787b7468335f73683472316e67346e5f72337633346c735f346c6c5f733363723374737d4837746578"
+print(bytes.fromhex(EncodedLeafScroll).decode())
+print(bytes.fromhex(EncodedANBUReport).decode())
+print(bytes.fromhex(DecodedLeafScroll).decode())
+print(bytes.fromhex(DecodedANBUReport).decode())
+print(bytes.fromhex(ChakraSignatureLeafScroll).decode())
+print(bytes.fromhex(ChakraSignatureANBUReport).decode())
