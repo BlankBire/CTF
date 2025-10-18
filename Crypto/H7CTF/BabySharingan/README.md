@@ -1,4 +1,4 @@
-### BabySharingan — Writeup (H7CTF)
+## BabySharingan — Writeup (H7CTF)
 
 ### Mô tả
 Bạn nhận được hai chuỗi hex và một vài gợi ý liên quan đến "Chakra" và các bản cuộn (scroll) của Làng Lá/ANBU. Nhiệm vụ là khôi phục nội dung thực và trích xuất chữ ký chakra để lấy flag.
