@@ -1,0 +1,4 @@
+Input your message in base85: 
+sig = @6,b\ANudDOPE!f+l*?.P5>1]Cj4-C)WV=!iXXE/+*n:i%r4T&dCd,%>WKAg^#3D&8t,:hceja0!TQ99M_Xgb'9A2e/Vf9:2r62JV]Soh(%:kp448OEk_?`2AM5taOY-fWU@=#Hn:27WqE*KRU6'iTTC9d>E9j,5kI+L9CRj*sbBXBOdtYtgP','6jsX6c]Ym7K?[:PI);C_MqcfY3HCmD=d['d&q*.XtA#S<`gq]j4Mt+6.BdW'2(r&#4406H]\WiguB]%^Yp=.$$gE3A8Cn8K->b=kTYi=/5Mb'eP7:D9)X$cOQA6F_%l7Zr`Gg/77,J!JE)[%W1g/XU18f6re=S8>AL-3YMHfa^E&I$o>-FQeg<bbUmi(Gq#Q.0htM:*A_UH6[MEeFW&mQ=Sh6AYneH2Ba$J@]u?p\#Wp"5aU3kRr3SS3C.!H@l1\]+JVp<TR`_QnR<]hPYt`+QHXoZot/B\5\QoN7"MC
+Sign(0) or Verify(1): Provide your signature in base85
+W1{I_Sh0u1D_u5e_pYThoN_TO-ImPL3m3n7_CRyP7o9r4pHlc-5CH3M3S..6f7}
