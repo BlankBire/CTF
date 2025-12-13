@@ -14,7 +14,7 @@
 - **Lỗi Random Seed:** `random.seed("Wanna Win?")` là cố định. Do đó, ma trận $A$ sinh bởi `random.randbytes` có thể dự đoán và tái tạo chính xác ở phía client.
 - **Hệ phương trình Max-Plus:** Phép toán mã hóa $b_i = \max_{j} (A_{ij} + x_j)$ tương đương với phép nhân ma trận trong đại số max-plus.
 - **Nghịch đảo:** Tìm $x$ bằng cách áp dụng công thức nghiệm chính:
-  $$ x_j = \min_{i} (b_i - A_{ij}) $$
+  $x_j = \min_i (b_i - A_{ij})$.
   Công thức này đảm bảo $A_{ij} + x_j \le b_i$ với mọi $i, j$, và $x_j$ là giá trị lớn nhất thỏa mãn.
 
 ### Lời giải
