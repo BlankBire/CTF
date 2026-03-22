@@ -8,7 +8,7 @@
 
 ### Tệp đính kèm
 
-- `dlp.txt`, `main.py`
+- `dlp.txt`.
 
 ### Phân tích
 

@@ -8,7 +8,7 @@
 
 ### Tệp đính kèm
 
-- `main.py`, `lcg.txt`.
+- `lcg.txt`.
 
 ### Phân tích
 
